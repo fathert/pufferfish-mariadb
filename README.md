@@ -1,3 +1,28 @@
+Pufferfish2 MariaDb
+===================
+
+_Pufferfish2 MariaDb_ is a MariaDb UDF wrapper over the [PufferFish2](https://github.com/epixoip/pufferfish) password hashing algorithm by [Jeremi M Gosney](https://github.com/epixoip) and insipred by [mariadb-bcrypt-udf](https://github.com/ryancdotorg/mariadb-bcrypt-udf), which inexplicable stopped working after I upgraded something. It compiles under Ubuntu 18.4 running in the WSL and requires install libssl-dev and probably openssl to be installed.
+
+### Installation
+```
+sudo apt-get install libssl-dev openssl
+make clean all
+```
+
+Declare the UDFs to MariaDb 
+```sql
+create or replace function pfcrypt_hash returns string  soname 'pfcrypt.so';
+create or replace function pfcrypt_check returns integer soname 'pfcrypt.so';
+```
+
+Test the UDFs 
+```sql
+select pfcrypt_hash('password', 8, 8);
+select pfcrypt_check('password', '$PF2$A.gPZz8xaRI47j6cehI1OC4.$kqZgu6NbiCMe09yTnWrrGPmU/oYfgwe9OIlrU3rUgGx3DBp35axZBuNcTWw5MMDxOdcEenS5VT9Hbk9.QrHnAO');
+```
+
+See the original PufferFish2 documentation below for an explanation of the additional parameters.
+
 Pufferfish2
 ==========
 
