@@ -1,7 +1,7 @@
 Pufferfish2 MariaDb
 ===================
 
-_Pufferfish2 MariaDb_ is a MariaDb UDF wrapper over the [PufferFish2](https://github.com/epixoip/pufferfish) password hashing algorithm by [Jeremi M Gosney](https://github.com/epixoip) and insipred by [mariadb-bcrypt-udf](https://github.com/ryancdotorg/mariadb-bcrypt-udf), which inexplicably stopped working after I upgraded something. It compiles under Ubuntu 18.4 running in the WSL and requires install libssl-dev and probably openssl to be installed.
+_Pufferfish2 MariaDb_ is a MariaDb UDF wrapper over the [PufferFish2](https://github.com/epixoip/pufferfish) password hashing algorithm by [Jeremi M Gosney](https://github.com/epixoip) and insipred by [mariadb-bcrypt-udf](https://github.com/ryancdotorg/mariadb-bcrypt-udf), which inexplicably stopped working after I upgraded something. It compiles under Ubuntu 18.4 running in the WSL and requires libssl-dev and probably openssl to be installed.
 
 ### Installation
 ```
