@@ -7,6 +7,7 @@ _Pufferfish2 MariaDb_ is a MariaDb UDF wrapper over the [PufferFish2](https://gi
 ```
 sudo apt-get install libssl-dev openssl
 make clean all
+cp pfcrypt.so /usr/lib/mysql/plugin/
 ```
 
 Declare the UDFs to MariaDb 
