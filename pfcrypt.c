@@ -21,7 +21,7 @@
 #include <mysql.h>
 #include "pufferfish.h"
 
-my_bool pfcrypt_hash_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
+bool pfcrypt_hash_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
 {
   if (args->arg_count != 3)
   {
@@ -70,7 +70,7 @@ char *pfcrypt_hash(UDF_INIT *initid, UDF_ARGS *args, char *res, unsigned long *l
   return res;
 }
 
-my_bool pfcrypt_check_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
+bool pfcrypt_check_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
 {
   if (args->arg_count != 2)
   {
