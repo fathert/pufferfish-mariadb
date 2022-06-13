@@ -5,6 +5,10 @@ _Pufferfish2 MariaDb_ is a MariaDb UDF wrapper over the [PufferFish2](https://gi
 
 ### Installation
 ```
+
+sudo apt-get install make
+sudo apt-get install gcc
+sudo apt-get install libmysqlclient-dev
 sudo apt-get install libssl-dev openssl
 make clean all
 cp pfcrypt.so /usr/lib/mysql/plugin/
