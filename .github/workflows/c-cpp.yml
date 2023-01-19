@@ -14,7 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Install xmllint
-      run: sudo apt-get install -y libmysqlclient-dev install libssl-dev openss
+      run: sudo apt-get install -y libmysqlclient-dev libssl-dev openssl
     - name: make
       run: make clean all
 
